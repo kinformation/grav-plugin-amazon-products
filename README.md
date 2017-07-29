@@ -59,25 +59,25 @@ Please register with AWS and obtain Access Key ID and Secret Key.
 ```
 [amazon asin=059035342X][/amazon]
 ```
-[](assets/image/sample_book.png)
+![](assets/image/sample_book.png)
 
 ### Music CD
 
 ```
 [amazon asin=B01LX4X7K0][/amazon]
 ```
-[](assets/image/sample_music.png)
+![](assets/image/sample_music.png)
 
 ### Video
 
 ```
 [amazon asin=B01B80CM4W][/amazon]
 ```
-[](assets/image/sample_dvd.png)
+![](assets/image/sample_dvd.png)
 
 ### Other
 
 ```
 [amazon asin=B015WXL0C6][/amazon]
 ```
-[](assets/image/sample_other.png)
+![](assets/image/sample_other.png)
