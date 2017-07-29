@@ -1,0 +1,64 @@
+name: Amazon
+version: 0.1.0
+description: Displays Amazon products by ASIN/ISBN-10 on your pages.
+icon: amazon
+author:
+  name: Kazuya Kanatani
+  email: kanatani.social@gmail.com
+homepage: https://github.com/kinformation/grav-plugin-amazon
+demo: https://github.com/kinformation/grav-plugin-amazon/blob/develop/README.md
+keywords: grav, plugin, amazon
+bugs: https://github.com/kinformation/grav-plugin-amazon/issues
+docs: https://github.com/kinformation/grav-plugin-amazon/blob/develop/README.md
+license: MIT
+
+dependencies:
+  - shortcode-core
+
+form:
+  validation: strict
+  fields:
+    enabled:
+      type: toggle
+      label: Plugin status
+      highlight: 1
+      default: 0
+      options:
+        1: Enabled
+        0: Disabled
+      validate:
+        type: bool
+
+    keys.accessKeyId:
+      type: text
+      label: AWS Access Key ID
+      size: large
+      validate:
+        required: true
+
+    keys.secretAccessKey:
+      type: text
+      label: AWS Secret Access Key
+      size: large
+      validate:
+        required: true
+
+    keys.associateTag:
+      type: text
+      label: Associate Tag
+      size: large
+
+    locale:
+      type: select
+      label: locale
+      default: US
+      options:
+        CA : CA
+        CN : CN
+        DE : DE
+        ES : ES
+        FR : FR
+        IT : IT
+        JP : JP
+        UK : UK
+        US : US

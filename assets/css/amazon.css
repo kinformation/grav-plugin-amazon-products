@@ -1,0 +1,51 @@
+/*
+ * amazon.css
+ * Copyright (C) 2017 kinformation<kanatani.social@gmail.com>
+ *
+ * Distributed under terms of the MIT license.
+ */
+
+.amzn-box {
+    background: white url(../image/logo.png) no-repeat right 1em bottom 1em;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+    display: -webkit-flex;
+    display: flex;
+    margin: 2em 0;
+    padding: 1em;
+}
+
+.amzn-image img {
+    max-width: none;
+}
+
+.amzn-content {
+    margin-left: 1em;
+}
+
+.amzn-title {
+    font-weight: bold;
+    margin: 0;
+}
+
+.amzn-title a {
+    box-shadow: none;
+    color: #d2691e;
+    text-decoration: none;
+}
+
+.amzn-desc {
+    color: #666;
+    list-style: none;
+    font-size: .9em;
+    margin: 0;
+    padding-left: .9em;
+}
+
+.amzn-desc li {
+    margin-bottom: .2em;
+}
+
+.amzn-price {
+    color: #b00;
+}

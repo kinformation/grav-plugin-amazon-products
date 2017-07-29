@@ -1,0 +1,6 @@
+enabled: true
+keys:
+  accessKeyId: "your AWS Access Key ID"
+  secretAccessKey: "your AWS Secret Access Key"
+  associateTag: "your Amazon AssociateTag"
+locale: "US"

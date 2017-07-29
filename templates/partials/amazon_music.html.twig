@@ -1,0 +1,40 @@
+<div class="amzn-box">
+    <div class="amzn-image">
+        <a href="{{ amazon_url }}" target="_blank" rel="nofollow">
+          <img src="{{ amazon_image }}" height="160" alt="{{ amazon_title }}"></a>
+        <a href="{{ amazon_url }}" target="_blank" rel="nofollow">
+        </a>
+    </div>
+    <div class="amzn-content">
+        <p class="amzn-title">
+            <a href="{{ amazon_url }}" target="_blank" rel="nofollow">
+                {{ amazon_title }}
+            </a>
+        </p>
+        <ul class="amzn-desc">
+            <li>
+                {{'PLUGIN_AMAZON.MUSIC.PRICE'|t}}&nbsp;<span class="amzn-price">{{ amazon_price }}</span> &nbsp; ({{ amazon_date }})
+            </li>
+            {% if amazon_artist %}
+            <li>
+                {{'PLUGIN_AMAZON.MUSIC.ARTIST'|t}}&nbsp;{{ amazon_artist }}
+            </li>
+            {% endif %}
+            {% if amazon_label %}
+            <li>
+                {{'PLUGIN_AMAZON.MUSIC.LABEL'|t}}&nbsp;{{ amazon_label }}
+            </li>
+            {% endif %}
+            {% if amazon_releaseDate %}
+            <li>
+                {{'PLUGIN_AMAZON.MUSIC.RELEASE_DATE'|t}}&nbsp;{{ amazon_releaseDate }}
+            </li>
+            {% endif %}
+            {% if amazon_runningTime %}
+            <li>
+                {{'PLUGIN_AMAZON.MUSIC.RUNNING_TIME'|t}}&nbsp;{{ amazon_runningTime }}{{ amazon_timeUnit }}
+            </li>
+            {% endif %}
+        </ul>
+    </div>
+</div>

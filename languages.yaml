@@ -1,0 +1,143 @@
+de:
+  PLUGIN_AMAZON:
+    BOOK:
+      PRICE: Preis
+      AUTHOR: Autor
+      PUBLICATION_DATE: Erscheinungsdatum
+      PUBLISHER: Verlag
+    MUSIC:
+      PRICE: Price
+      ARTIST: Künstler
+      LABEL: Label
+      RELEASE_DATE: Erscheinungsdatum
+      RUNNING_TIME: Dauer
+    VIDEO:
+      PRICE: Preis
+      DIRECTOR: Regisseur(e)
+      ACTOR: Darsteller
+      LABEL: Studio
+      RELEASE_DATE: Erscheinungsdatum
+      RUNNING_TIME: Spieldauer
+    DEFAULT:
+      PRICE: Preis
+      BRAND: Marke
+
+en:
+  PLUGIN_AMAZON:
+    BOOK:
+      PRICE: Price
+      AUTHOR: Author
+      PUBLICATION_DATE: "Publication Date"
+      PUBLISHER: Publisher
+    MUSIC:
+      PRICE: Price
+      ARTIST: Artist
+      LABEL: Label
+      RELEASE_DATE: "Release Date"
+      RUNNING_TIME: "Run Time"
+    VIDEO:
+      PRICE: Price
+      DIRECTOR: Director
+      ACTOR: Actor
+      LABEL: Label
+      RELEASE_DATE: "Release Date"
+      RUNNING_TIME: "Run Time"
+    DEFAULT:
+      PRICE: Price
+      BRAND: Brand
+
+es:
+  PLUGIN_AMAZON:
+    BOOK:
+      PRICE: Precio
+      AUTHOR: Autor
+      PUBLICATION_DATE: "Fecha de publicación"
+      PUBLISHER: Editor
+    MUSIC:
+      PRICE: Precio
+      ARTIST: Artista
+      LABEL: Sello
+      RELEASE_DATE: "Fecha de lanzamiento"
+      RUNNING_TIME: Duración
+    VIDEO:
+      PRICE: Precio
+      DIRECTOR: Directores
+      ACTOR: Actores
+      LABEL: Estudio
+      RELEASE_DATE: "Fecha de lanzamiento"
+      RUNNING_TIME: Duración
+    DEFAULT:
+      PRICE: Precio
+      BRAND: Marca
+
+fr:
+  PLUGIN_AMAZON:
+    BOOK:
+      PRICE: Prix
+      AUTHOR: Auteur
+      PUBLICATION_DATE: "Date de publication"
+      PUBLISHER: Editeur
+    MUSIC:
+      PRICE: Prix
+      ARTIST: Artiste
+      LABEL: Label
+      RELEASE_DATE: "Date de sortie"
+      RUNNING_TIME: Durée
+    VIDEO:
+      PRICE: Prix
+      DIRECTOR: Réalisateur
+      ACTOR: Acteurs
+      LABEL: Studio
+      RELEASE_DATE: "Date de sortie"
+      RUNNING_TIME: Durée
+    DEFAULT:
+      PRICE: Prix
+      BRAND: Marque
+
+it:
+  PLUGIN_AMAZON:
+    BOOK:
+      PRICE: Prezzo
+      AUTHOR: Autore
+      PUBLICATION_DATE: "Data di rilascio"
+      PUBLISHER: Editore
+    MUSIC:
+      PRICE: Prezzo
+      ARTIST: Artista
+      LABEL: Etichetta
+      RELEASE_DATE: "Data di uscita"
+      RUNNING_TIME: Durata
+    VIDEO:
+      PRICE: Prezzo
+      DIRECTOR: Regista
+      ACTOR: Attori
+      LABEL: Durata
+      RELEASE_DATE: "Data di uscita"
+      RUNNING_TIME: Durata
+    DEFAULT:
+      PRICE: Prezzo
+      BRAND: Marca
+
+ja:
+  PLUGIN_AMAZON:
+    BOOK:
+      PRICE: 価格
+      AUTHOR: 著者
+      PUBLICATION_DATE: 発売日
+      PUBLISHER: 出版社
+    MUSIC:
+      PRICE: 価格
+      ARTIST: アーティスト
+      LABEL: レーベル
+      RELEASE_DATE: 発売日
+      RUNNING_TIME: 収録時間
+    VIDEO:
+      PRICE: 価格
+      DIRECTOR: 監督
+      ACTOR: 主演
+      LABEL: 販売元
+      RELEASE_DATE: 発売日
+      RUNNING_TIME: 時間
+    DEFAULT:
+      PRICE: 価格
+      BRAND: 販売元
