@@ -2,7 +2,7 @@
 /**
  * Short description for amazon_request.php
  *
- * @package amazon
+ * @package amazon-products
  * @author Kazuya Kanatani
  * @version 0.1
  * @copyright (C) 2017 kinformation<kanatani.social@gmail.com>
