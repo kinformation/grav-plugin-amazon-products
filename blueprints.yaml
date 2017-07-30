@@ -6,7 +6,6 @@ author:
   name: Kazuya Kanatani
   email: kanatani.social@gmail.com
 homepage: https://github.com/kinformation/grav-plugin-amazon-products
-demo: https://github.com/kinformation/grav-plugin-amazon-products/blob/develop/README.md
 keywords: grav, plugin, amazon, products
 bugs: https://github.com/kinformation/grav-plugin-amazon-products/issues
 docs: https://github.com/kinformation/grav-plugin-amazon-products/blob/develop/README.md
