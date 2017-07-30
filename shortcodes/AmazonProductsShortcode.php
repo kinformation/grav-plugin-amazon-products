@@ -1,8 +1,8 @@
 <?php
 /**
- * Short description for AmazonShortcode.php
+ * Short description for AmazonProductsShortcode.php
  *
- * @package amazon
+ * @package amazon-products
  * @author Kazuya Kanatani
  * @version 0.1
  * @copyright (C) 2017 kinformation<kanatani.social@gmail.com>
@@ -13,7 +13,7 @@ namespace Grav\Plugin\Shortcodes;
 
 use Thunder\Shortcode\Shortcode\ShortcodeInterface;
 
-class AmazonShortcode extends Shortcode
+class AmazonProductsShortcode extends Shortcode
 {
     public function init()
     {
@@ -116,18 +116,18 @@ class AmazonShortcode extends Shortcode
     private function ItemLookup($ItemId)
     {
         if (!defined('User_Locale'))
-            define("User_Locale", strtoupper($this->config->get('plugins.amazon.locale')));
+            define("User_Locale", strtoupper($this->config->get('plugins.amazon-products.locale')));
         if (!defined('Associate_Tag')) {
-            $atag = trim($this->config->get('plugins.amazon.keys.associateTag'));
+            $atag = trim($this->config->get('plugins.amazon-products.keys.associateTag'));
             !empty($atag)
                 ? define("Associate_Tag", $atag)
                 : define("Associate_Tag", 'XXXXX');
         }
         if (!defined('Access_Key_ID'))
-            define("Access_Key_ID", trim($this->config->get('plugins.amazon.keys.accessKeyId')));
+            define("Access_Key_ID", trim($this->config->get('plugins.amazon-products.keys.accessKeyId')));
         if (!defined('Secret_Access_Key'))
-            define("Secret_Access_Key", trim($this->config->get('plugins.amazon.keys.secretAccessKey')));
-        include("plugin://amazon/amazon_request.php");
+            define("Secret_Access_Key", trim($this->config->get('plugins.amazon-products.keys.secretAccessKey')));
+        include("plugin://amazon-products/amazon_request.php");
 
         $amazon_xml = '';
         $ret = '';

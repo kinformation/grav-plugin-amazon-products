@@ -13,26 +13,26 @@
         </p>
         <ul class="amzn-desc">
             <li>
-                {{'PLUGIN_AMAZON.MUSIC.PRICE'|t}}&nbsp;<span class="amzn-price">{{ amazon_price }}</span> &nbsp; ({{ amazon_date }})
+                {{'PLUGIN_AMAZON_PRODUCTS.MUSIC.PRICE'|t}}&nbsp;<span class="amzn-price">{{ amazon_price }}</span> &nbsp; ({{ amazon_date }})
             </li>
             {% if amazon_artist %}
             <li>
-                {{'PLUGIN_AMAZON.MUSIC.ARTIST'|t}}&nbsp;{{ amazon_artist }}
+                {{'PLUGIN_AMAZON_PRODUCTS.MUSIC.ARTIST'|t}}&nbsp;{{ amazon_artist }}
             </li>
             {% endif %}
             {% if amazon_label %}
             <li>
-                {{'PLUGIN_AMAZON.MUSIC.LABEL'|t}}&nbsp;{{ amazon_label }}
+                {{'PLUGIN_AMAZON_PRODUCTS.MUSIC.LABEL'|t}}&nbsp;{{ amazon_label }}
             </li>
             {% endif %}
             {% if amazon_releaseDate %}
             <li>
-                {{'PLUGIN_AMAZON.MUSIC.RELEASE_DATE'|t}}&nbsp;{{ amazon_releaseDate }}
+                {{'PLUGIN_AMAZON_PRODUCTS.MUSIC.RELEASE_DATE'|t}}&nbsp;{{ amazon_releaseDate }}
             </li>
             {% endif %}
             {% if amazon_runningTime %}
             <li>
-                {{'PLUGIN_AMAZON.MUSIC.RUNNING_TIME'|t}}&nbsp;{{ amazon_runningTime }}{{ amazon_timeUnit }}
+                {{'PLUGIN_AMAZON_PRODUCTS.MUSIC.RUNNING_TIME'|t}}&nbsp;{{ amazon_runningTime }}{{ amazon_timeUnit }}
             </li>
             {% endif %}
         </ul>

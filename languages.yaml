@@ -1,5 +1,5 @@
 de:
-  PLUGIN_AMAZON:
+  PLUGIN_AMAZON_PRODUCTS:
     BOOK:
       PRICE: Preis
       AUTHOR: Autor
@@ -23,7 +23,7 @@ de:
       BRAND: Marke
 
 en:
-  PLUGIN_AMAZON:
+  PLUGIN_AMAZON_PRODUCTS:
     BOOK:
       PRICE: Price
       AUTHOR: Author
@@ -47,7 +47,7 @@ en:
       BRAND: Brand
 
 es:
-  PLUGIN_AMAZON:
+  PLUGIN_AMAZON_PRODUCTS:
     BOOK:
       PRICE: Precio
       AUTHOR: Autor
@@ -71,7 +71,7 @@ es:
       BRAND: Marca
 
 fr:
-  PLUGIN_AMAZON:
+  PLUGIN_AMAZON_PRODUCTS:
     BOOK:
       PRICE: Prix
       AUTHOR: Auteur
@@ -95,7 +95,7 @@ fr:
       BRAND: Marque
 
 it:
-  PLUGIN_AMAZON:
+  PLUGIN_AMAZON_PRODUCTS:
     BOOK:
       PRICE: Prezzo
       AUTHOR: Autore
@@ -119,7 +119,7 @@ it:
       BRAND: Marca
 
 ja:
-  PLUGIN_AMAZON:
+  PLUGIN_AMAZON_PRODUCTS:
     BOOK:
       PRICE: 価格
       AUTHOR: 著者

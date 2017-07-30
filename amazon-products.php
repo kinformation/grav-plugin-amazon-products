@@ -1,8 +1,8 @@
 <?php
 /**
- * Short description for amazon.php
+ * Short description for amazon-products.php
  *
- * @package amazon
+ * @package amazon-products
  * @author Kazuya Kanatani
  * @version 0.1
  * @copyright (C) 2017 kinformation<kanatani.social@gmail.com>
@@ -13,7 +13,7 @@ namespace Grav\Plugin;
 
 use Grav\Common\Plugin;
 
-class AmazonPlugin extends Plugin
+class AmazonProductsPlugin extends Plugin
 {
     /**
      * @return array
@@ -32,7 +32,7 @@ class AmazonPlugin extends Plugin
      */
     public function onTwigSiteVariables()
     {
-        $this->grav['assets']->addCss('plugin://amazon/assets/css/amazon.css');
+        $this->grav['assets']->addCss('plugin://amazon-products/assets/css/amazon-products.css');
     }
 
     /**
