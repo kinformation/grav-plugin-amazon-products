@@ -30,13 +30,13 @@ class AmazonProductsShortcode extends Shortcode
             $item_title = $item->ItemAttributes->Title;
             $item_image  = $item->MediumImage->URL;
             $item_url = $item->DetailPageURL;
-            $item_price = $item->Offers->TotalOffers > 0
-                ? $item->Offers->Offer->OfferListing->Price->FormattedPrice
-                : $item->OfferSummary->LowestNewPrice->FormattedPrice;
-
+            $item_price = @$item->Offers->Offer->OfferListing->Price->FormattedPrice
+                       ?: @$item_price = $item->OfferSummary->LowestNewPrice->FormattedPrice
+                       ?: '';
             $item_productgroup = $item->ItemAttributes->ProductGroup;
             switch ($item_productgroup) {
                 case 'Book':
+                case 'eBooks':
                     $item_author = $item->ItemAttributes->Author;
                     $item_publicationdate = $item->ItemAttributes->PublicationDate;
                     $item_publisher = $item->ItemAttributes->Publisher;
