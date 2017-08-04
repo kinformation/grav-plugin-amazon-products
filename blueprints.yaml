@@ -1,5 +1,5 @@
 name: Amazon Products
-version: 0.2.0
+version: 0.2.1
 description: Displays Amazon products by ASIN/ISBN-10 on your pages.
 icon: amazon
 author:
@@ -8,7 +8,7 @@ author:
 homepage: https://github.com/kinformation/grav-plugin-amazon-products
 keywords: grav, plugin, amazon, products
 bugs: https://github.com/kinformation/grav-plugin-amazon-products/issues
-docs: https://github.com/kinformation/grav-plugin-amazon-products/blob/develop/README.md
+docs: https://github.com/kinformation/grav-plugin-amazon-products/blob/master/README.md
 license: MIT
 
 dependencies:
