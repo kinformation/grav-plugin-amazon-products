@@ -54,6 +54,7 @@ class AmazonProductsShortcode extends Shortcode
 
                 case 'Music':
                 case 'Digital Music Album':
+                case 'Digital Music Track':
                     $item_artist = $item->ItemAttributes->Artist;
                     if (empty($item_artist))
                         $item_artist = $item->ItemAttributes->Creator;
@@ -76,6 +77,7 @@ class AmazonProductsShortcode extends Shortcode
                     break;
 
                 case 'DVD':
+                case 'Movie':
                     $item_director = $item->ItemAttributes->Director;
                     $item_actor = $item->ItemAttributes->Actor;
                     $item_label = $item->ItemAttributes->Label;
