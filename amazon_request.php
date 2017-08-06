@@ -4,7 +4,7 @@
  *
  * @package amazon-products
  * @author Kazuya Kanatani
- * @version 0.1
+ * @version 0.2
  * @copyright (C) 2017 kinformation<kanatani.social@gmail.com>
  * @license MIT
  */
@@ -59,45 +59,35 @@ $locales = array(
 
 $locale = array_key_exists ( User_Locale, $locales ) ? $locales[User_Locale] : $locales['US'];
 $baseurl = $locale['baseUri'];
-$params = array();
-$params["Service"]          = "AWSECommerceService";
-$params["AWSAccessKeyId"]   = Access_Key_ID;
-$params["Version"]          = "2013-08-01";
-$params["Operation"]        = "ItemLookup";
-$params["ItemId"]           = $ItemId;
-$params["AssociateTag"]     = Associate_Tag;
-$params["ResponseGroup"]    = "ItemAttributes,Offers,Images";
 
-$request = "";
-foreach ($params as $k => $v) {
-    $request .= "&" . $k . "=" . $v;
-}
-$request = $baseurl . "?" . substr($request, 1);
-$params["Timestamp"] = gmdate("Y-m-d\TH:i:s\Z");
-$request .= "&Timestamp=" . $params['Timestamp'];
-$request = "";
-foreach ($params as $k => $v) {
-    $request .= '&' . $k . '=' . rawurlencode($v);
-    $params[$k] = rawurlencode($v);
-}
-$request = $baseurl . "?" . substr($request, 1);
-$request = preg_replace("/.*\?/", "", $request);
-$request = str_replace("&", "\n", $request);
+// Request parameters
+$params = array();
+$params["Service"]        = "AWSECommerceService";
+$params["AWSAccessKeyId"] = Access_Key_ID;
+$params["Version"]        = "2013-08-01";
+$params["Operation"]      = "ItemLookup";
+$params["ItemId"]         = $ItemId;
+$params["AssociateTag"]   = Associate_Tag;
+$params["ResponseGroup"]  = "ItemAttributes,Offers,Images";
+$params["Timestamp"]      = gmdate("Y-m-d\TH:i:s\Z");
+
+// Alphabetical order
 ksort($params);
-$request = "";
+
+// Concatenate parameters
+$url_param = "";
 foreach ($params as $k => $v) {
-    $request .= "&" . $k . "=" . $v;
+    $url_param .= '&' . $k . '=' . rawurlencode($v);
 }
-$request = substr($request, 1);
-$request = str_replace("&", "\n", $request);
-$request = str_replace("\n", "&", $request);
+$url_param = substr($url_param, 1);
+
+// Signature
 $parsed_url = parse_url($baseurl);
-$request = "GET\n" . $parsed_url['host'] . "\n" . $parsed_url['path'] . "\n" . $request;
-$signature = base64_encode(hash_hmac('sha256', $request, Secret_Access_Key, true)); // secret
+$sigbase = "GET\n" . $parsed_url['host'] . "\n" . $parsed_url['path'] . "\n" . $url_param;
+$signature = base64_encode(hash_hmac('sha256', $sigbase, Secret_Access_Key, true));
 $signature = rawurlencode($signature);
-$request = "";
-foreach ($params as $k => $v) {
-    $request .= "&" . $k . "=" . $v;
-}
-$request = $baseurl . "?" . substr($request, 1) . "&Signature=" . $signature;
+
+// Create request
+$request = $baseurl . "?" . $url_param . "&Signature=" . $signature;
+
 // echo '<a href="'.$request.'">link</a>';
