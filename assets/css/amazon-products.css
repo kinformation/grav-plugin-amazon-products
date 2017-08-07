@@ -15,11 +15,18 @@
     padding: 1em;
 }
 
+.amzn-image {
+    width: 25%;
+    text-align: center;
+}
+
 .amzn-image img {
     max-width: none;
+    max-height: 160px;
 }
 
 .amzn-content {
+    width: 75%;
     margin-left: 1em;
 }
 
@@ -42,8 +49,18 @@
     padding-left: .9em;
 }
 
-.amzn-desc li {
-    margin-bottom: .2em;
+.amzn-desc dt {
+    display: block;
+    width: 8em;
+    clear: left;
+    float: left;
+    margin: 0;
+}
+
+.amzn-desc dd {
+    display: block;
+    float: left;
+    margin: 0;
 }
 
 .amzn-price {

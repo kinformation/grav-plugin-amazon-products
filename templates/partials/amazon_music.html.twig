@@ -1,7 +1,7 @@
 <div class="amzn-box">
     <div class="amzn-image">
         <a href="{{ amazon_url }}" target="_blank" rel="nofollow">
-          <img src="{{ amazon_image }}" height="160" alt="{{ amazon_title }}"></a>
+          <img src="{{ amazon_image }}" alt="{{ amazon_title }}"></a>
         <a href="{{ amazon_url }}" target="_blank" rel="nofollow">
         </a>
     </div>
@@ -11,30 +11,45 @@
                 {{ amazon_title }}
             </a>
         </p>
-        <ul class="amzn-desc">
-            <li>
-                {{'PLUGIN_AMAZON_PRODUCTS.MUSIC.PRICE'|t}}&nbsp;<span class="amzn-price">{{ amazon_price }}</span> &nbsp; ({{ amazon_date }})
-            </li>
+        <dl class="amzn-desc">
+            <dt>
+                {{'PLUGIN_AMAZON_PRODUCTS.MUSIC.PRICE'|t}}
+            </dt>
+            <dd>
+                <span class="amzn-price">{{ amazon_price }}</span> &nbsp; ({{ amazon_date }})
+            </dd>
             {% if amazon_artist %}
-            <li>
-                {{'PLUGIN_AMAZON_PRODUCTS.MUSIC.ARTIST'|t}}&nbsp;{{ amazon_artist }}
-            </li>
+            <dt>
+                {{'PLUGIN_AMAZON_PRODUCTS.MUSIC.ARTIST'|t}}
+            </dt>
+            <dd>
+                {{ amazon_artist }}
+            </dd>
             {% endif %}
             {% if amazon_label %}
-            <li>
-                {{'PLUGIN_AMAZON_PRODUCTS.MUSIC.LABEL'|t}}&nbsp;{{ amazon_label }}
-            </li>
+            <dt>
+                {{'PLUGIN_AMAZON_PRODUCTS.MUSIC.LABEL'|t}}
+            </dt>
+            <dd>
+                {{ amazon_label }}
+            </dd>
             {% endif %}
             {% if amazon_releaseDate %}
-            <li>
-                {{'PLUGIN_AMAZON_PRODUCTS.MUSIC.RELEASE_DATE'|t}}&nbsp;{{ amazon_releaseDate }}
-            </li>
+            <dt>
+                {{'PLUGIN_AMAZON_PRODUCTS.MUSIC.RELEASE_DATE'|t}}
+            </dt>
+            <dd>
+                {{ amazon_releaseDate }}
+            </dd>
             {% endif %}
             {% if amazon_runningTime %}
-            <li>
-                {{'PLUGIN_AMAZON_PRODUCTS.MUSIC.RUNNING_TIME'|t}}&nbsp;{{ amazon_runningTime }}{{ amazon_timeUnit }}
-            </li>
+            <dt>
+                {{'PLUGIN_AMAZON_PRODUCTS.MUSIC.RUNNING_TIME'|t}}
+            </dt>
+            <dd>
+                {{ amazon_runningTime }}{{ amazon_timeUnit }}
+            </dd>
             {% endif %}
-        </ul>
+        </dl>
     </div>
 </div>

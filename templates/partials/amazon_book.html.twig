@@ -1,7 +1,7 @@
 <div class="amzn-box">
     <div class="amzn-image">
         <a href="{{ amazon_url }}" target="_blank" rel="nofollow">
-          <img src="{{ amazon_image }}" height="160" alt="{{ amazon_title }}"></a>
+          <img src="{{ amazon_image }}" alt="{{ amazon_title }}"></a>
         <a href="{{ amazon_url }}" target="_blank" rel="nofollow">
         </a>
     </div>
@@ -11,27 +11,39 @@
                 {{ amazon_title }}
             </a>
         </p>
-        <ul class="amzn-desc">
+        <dl class="amzn-desc">
             {% if amazon_price %}
-            <li>
-                {{'PLUGIN_AMAZON_PRODUCTS.BOOK.PRICE'|t}}&nbsp;<span class="amzn-price">{{ amazon_price }}</span> &nbsp; ({{ amazon_date }})
-            </li>
+            <dt>
+                {{'PLUGIN_AMAZON_PRODUCTS.BOOK.PRICE'|t}}
+            </dt>
+            <dd>
+                <span class="amzn-price">{{ amazon_price }}</span> &nbsp; ({{ amazon_date }})
+            </dd>
             {% endif %}
             {% if amazon_author %}
-            <li>
-                {{'PLUGIN_AMAZON_PRODUCTS.BOOK.AUTHOR'|t}}&nbsp;{{ amazon_author }}
-            </li>
+            <dt>
+                {{'PLUGIN_AMAZON_PRODUCTS.BOOK.AUTHOR'|t}}
+            </dt>
+            <dd>
+                {{ amazon_author }}
+            </dd>
             {% endif %}
             {% if amazon_publisher %}
-            <li>
-                {{'PLUGIN_AMAZON_PRODUCTS.BOOK.PUBLISHER'|t}}&nbsp;{{ amazon_publisher }}
-            </li>
+            <dt>
+                {{'PLUGIN_AMAZON_PRODUCTS.BOOK.PUBLISHER'|t}}
+            </dt>
+            <dd>
+                {{ amazon_publisher }}
+            </dd>
             {% endif %}
             {% if amazon_publicationDate %}
-            <li>
-                {{'PLUGIN_AMAZON_PRODUCTS.BOOK.PUBLICATION_DATE'|t}}&nbsp;{{ amazon_publicationDate }}
-            </li>
+            <dt>
+                {{'PLUGIN_AMAZON_PRODUCTS.BOOK.PUBLICATION_DATE'|t}}
+            </dt>
+            <dd>
+                {{ amazon_publicationDate }}
+            </dd>
             {% endif %}
-        </ul>
+        </dl>
     </div>
 </div>

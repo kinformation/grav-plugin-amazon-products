@@ -1,7 +1,7 @@
 <div class="amzn-box">
     <div class="amzn-image">
         <a href="{{ amazon_url }}" target="_blank" rel="nofollow">
-          <img src="{{ amazon_image }}" height="160" alt="{{ amazon_title }}"></a>
+          <img src="{{ amazon_image }}" alt="{{ amazon_title }}"></a>
         <a href="{{ amazon_url }}" target="_blank" rel="nofollow">
         </a>
     </div>
@@ -11,15 +11,21 @@
                 {{ amazon_title }}
             </a>
         </p>
-        <ul class="amzn-desc">
-            <li>
-                {{'PLUGIN_AMAZON_PRODUCTS.DEFAULT.PRICE'|t}}&nbsp;<span class="amzn-price">{{ amazon_price }}</span> &nbsp; ({{ amazon_date }})
-            </li>
+        <dl class="amzn-desc">
+            <dt>
+                {{'PLUGIN_AMAZON_PRODUCTS.DEFAULT.PRICE'|t}}
+            </dt>
+            <dd>
+                <span class="amzn-price">{{ amazon_price }}</span> &nbsp; ({{ amazon_date }})
+            </dd>
             {% if amazon_brand %}
-            <li>
-                {{'PLUGIN_AMAZON_PRODUCTS.DEFAULT.BRAND'|t}}&nbsp;{{ amazon_brand }}
-            </li>
+            <dt>
+                {{'PLUGIN_AMAZON_PRODUCTS.DEFAULT.BRAND'|t}}
+            </dt>
+            <dd>
+                {{ amazon_brand }}
+            </dd>
             {% endif %}
-        </ul>
+        </dl>
     </div>
 </div>
