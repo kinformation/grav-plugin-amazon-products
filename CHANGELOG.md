@@ -1,3 +1,11 @@
+# v0.3.0
+##  08/08/2017
+
+1. [](#improved)
+   * Improve ad template
+   * Optimize API request generation method
+   * Optimize distribution of ProductGroup
+
 # v0.2.1
 ##  08/04/2017
 
