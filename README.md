@@ -50,9 +50,11 @@ Please register with AWS and obtain Access Key ID and Secret Key.
 ## Usage
 
 ```
-[amazon asin='059035342X'][/amazon]
+[amazon asin=059035342X][/amazon]
+or
+[amazon asin=https://www.amazon.com/Harry-Potter-Sorcerers-Stone-Rowling/dp/059035342X/ref=sr_1_1...][/amazon]
 ```
-* asin: (required) ASIN (ProductID of Amazon) or ISBN-10 (Book)
+* asin: (required) ASIN (ProductID of Amazon) or ISBN-10 (Book) or Amazon Products URL
 
 ### Book
 
