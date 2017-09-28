@@ -22,7 +22,8 @@ class AmazonProductsShortcode extends Shortcode
             $current_date = date("Y/m/d H:i");
 
             $asin = $sc->getParameter('asin');
-            $item = $this->ItemLookup($asin);
+            $asin = $this->extract_asin($asin);
+            $item = $this->lookup_item($asin);
             if (empty($item)) {
                 return '';
             }
@@ -56,8 +57,9 @@ class AmazonProductsShortcode extends Shortcode
                 case 'Digital Music Album':
                 case 'Digital Music Track':
                     $item_artist = $item->ItemAttributes->Artist;
-                    if (empty($item_artist))
+                    if (empty($item_artist)) {
                         $item_artist = $item->ItemAttributes->Creator;
+                    }
                     $item_label =  $item->ItemAttributes->Label;
                     $item_releaseDate = $item->ItemAttributes->ReleaseDate;
                     $item_runningTime =  $item->ItemAttributes->RunningTime;
@@ -115,20 +117,23 @@ class AmazonProductsShortcode extends Shortcode
         });
     }
 
-    private function ItemLookup($ItemId)
+    private function lookup_item($ItemId)
     {
-        if (!defined('User_Locale'))
+        if (!defined('User_Locale')) {
             define("User_Locale", strtoupper($this->config->get('plugins.amazon-products.locale')));
+        }
         if (!defined('Associate_Tag')) {
             $atag = trim($this->config->get('plugins.amazon-products.keys.associateTag'));
             !empty($atag)
                 ? define("Associate_Tag", $atag)
                 : define("Associate_Tag", 'XXXXX');
         }
-        if (!defined('Access_Key_ID'))
+        if (!defined('Access_Key_ID')) {
             define("Access_Key_ID", trim($this->config->get('plugins.amazon-products.keys.accessKeyId')));
-        if (!defined('Secret_Access_Key'))
+        }
+        if (!defined('Secret_Access_Key')) {
             define("Secret_Access_Key", trim($this->config->get('plugins.amazon-products.keys.secretAccessKey')));
+        }
         include("plugin://amazon-products/amazon_request.php");
 
         $amazon_xml = '';
@@ -148,5 +153,27 @@ class AmazonProductsShortcode extends Shortcode
             break;
         }
         return $ret;
+    }
+
+    private function extract_asin($asin)
+    {
+        if (empty($asin)) {
+            return '';
+        }
+
+        // Only ASIN/ISBN
+        if (preg_match('/^[a-zA-Z0-9]+$/', $asin) === 1) {
+            return $asin;
+        }
+
+        // Extract ASIN by raw amazonURL
+        if (preg_match('#/dp/([a-zA-Z0-9]+)/#', $asin, $matches) === 1) {
+            return $matches[1];
+        }
+        if (preg_match('#/gp/product/([a-zA-Z0-9]+)/#', $asin, $matches) === 1) {
+            return $matches[1];
+        }
+
+        return '';
     }
 }
