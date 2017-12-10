@@ -1,5 +1,5 @@
 name: Amazon Products
-version: 0.4.0
+version: 0.5.0
 description: Displays Amazon products by ASIN/ISBN-10 on your pages.
 icon: amazon
 author:
@@ -28,6 +28,17 @@ form:
       validate:
         type: bool
 
+    editor_button:
+      type: toggle
+      label: Editor Button
+      highlight: 1
+      default: 0
+      options:
+        1: Enabled
+        0: Disabled
+      validate:
+        type: bool
+
     keys.accessKeyId:
       type: text
       label: AWS Access Key ID
@@ -36,7 +47,7 @@ form:
         required: true
 
     keys.secretAccessKey:
-      type: text
+      type: password
       label: AWS Secret Access Key
       size: large
       validate:

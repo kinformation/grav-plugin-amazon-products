@@ -1,3 +1,12 @@
+# v0.5.0
+##  12/10/2017
+
+1. [](#improved)
+   * fix: Anonymize form of AWS Secret Access Key
+
+1. [](#new)
+    * add: Editor button
+
 # v0.4.0
 ##  09/28/2017
 

@@ -16,6 +16,8 @@ This will install the Amazon plugin into your `/user/plugins` directory within G
 
 ### Manual Installation
 
+> NOTE: This plugin depends on [Shortcode Core](https://github.com/getgrav/grav-plugin-shortcode-core), so you need to install it in advance.
+
 To install this plugin, just download the zip version of this repository and unzip it under `/your/site/grav/user/plugins`. Then, rename the folder to `amazon-products`. You can find these files on [GitHub](https://github.com/kinformation/grav-plugin-amazon-products) or via [GetGrav.org](http://getgrav.org/downloads/plugins#extras).
 
 You should now have all the plugin files under
@@ -83,3 +85,10 @@ or
 [amazon asin=B015WXL0C6][/amazon]
 ```
 ![](assets/image/sample_other.png)
+
+> NOTE: If you do not see your ad, please check the following.
+> * The validity of your AWS Access Key IDs.
+> * Whether you can acquire the item XML you specified.
+You can check with [Product Advertising API Scratchpad](http://webservices.amazon.com/scratchpad/)
+> * Check config of PHP extension `suhosin`.
+`suhosin.executor.include.whitelist = phar, plugin`

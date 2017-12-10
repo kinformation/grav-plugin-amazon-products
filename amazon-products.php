@@ -12,6 +12,11 @@
 namespace Grav\Plugin;
 
 use Grav\Common\Plugin;
+// use Grav\Common\Data\Data;
+// use Grav\Common\Page\Page;
+// use Grav\Common\Twig\Twig;
+// use Grav\Plugin\Youtube\Twig\YoutubeTwigExtension;
+// use RocketTheme\Toolbox\Event\Event;
 
 class AmazonProductsPlugin extends Plugin
 {
@@ -32,7 +37,12 @@ class AmazonProductsPlugin extends Plugin
      */
     public function onTwigSiteVariables()
     {
-        $this->grav['assets']->addCss('plugin://amazon-products/assets/css/amazon-products.css');
+        if (!$this->isAdmin()) {
+            $this->grav['assets']->addCss('plugin://amazon-products/assets/css/amazon-products.css');
+        }
+        if ($this->isAdmin() && $this->config->get('plugins.amazon-products.editor_button')) {
+            $this->grav['assets']->add('plugin://amazon-products/admin/editor-button/js/button.js');
+        }
     }
 
     /**
