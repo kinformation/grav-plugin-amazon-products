@@ -93,7 +93,3 @@ You can check with [Product Advertising API Scratchpad](http://webservices.amazo
 > * Check config of PHP extension `suhosin`.
 `suhosin.executor.include.whitelist = phar, plugin`
 > * "OK" is checked for `Translations enabled` and `Translations fallback` in the system setting
-
-
-Translations enabled
-Translations fallback
